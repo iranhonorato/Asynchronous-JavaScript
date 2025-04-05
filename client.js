@@ -32,10 +32,21 @@ axios({
             headers: {"Content-Type": "application/json", "Accept": "application/json", "Authorization": `Bearer ${token}`}
           })
 
+        // tamanho string
+        const tamanhoString = string => {
+            return string.length
+        }
+        const resultadoTamanhoString = tamanhoString(response.data['tamanho-string'].entrada.string)
+        axios({
+            method: "post",
+            url: "https://servidor-exercicios-js-eficaz.vercel.app/exercicio/tamanho-string",
+            data: {"resposta": resultadoTamanhoString},
+            headers: {"Content-Type": "application/json", "Accept": "application/json", "Authorization": `Bearer ${token}`}
+          })
+
         .then((response) => {
             console.log(response.data)
         })
-
 
 
 
