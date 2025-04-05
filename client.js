@@ -10,8 +10,21 @@ axios({
   })
 
 .then((response) => {
-    console.log(response.data.accessToken);
-}, (error) => {
+    const token = response.data.accessToken;
+
+    // Enviando uma requisição tipo GET para obter os exercícios
+    axios({
+        method: 'get',
+        url: 'https://servidor-exercicios-js-eficaz.vercel.app/exercicio',
+        headers: {"Content-Type": "application/json", "Accept": "application/json", "Authorization": `Bearer ${token}`}
+    })
+
+    .then((response) => {
+        console.log(response.data)
+    }, (error) => {
+        console.log(error)
+    })
+    }, (error) => {
     console.log(error)
-});
+    });
 
