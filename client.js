@@ -20,7 +20,25 @@ axios({
     })
 
     .then((response) => {
-        console.log(response.data)
+        // Soma valores
+        const soma = (a,b) => {
+            return a + b 
+        }
+        const resultadoSoma = soma(response.data.soma.entrada.a, response.data.soma.entrada.b)
+        axios({
+            method: "post",
+            url: "https://servidor-exercicios-js-eficaz.vercel.app/exercicio/soma",
+            data: {"resposta": resultadoSoma},
+            headers: {"Content-Type": "application/json", "Accept": "application/json", "Authorization": `Bearer ${token}`}
+          })
+
+        .then((response) => {
+            console.log(response.data)
+        })
+
+
+
+
     }, (error) => {
         console.log(error)
     })
