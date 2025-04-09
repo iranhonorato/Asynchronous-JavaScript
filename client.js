@@ -298,14 +298,48 @@ axios({
             data: {"resposta": resultadoPrimo},
             headers: {"Content-Type": "application/json", "Accept": "application/json", "Authorization": `Bearer ${token}`}
           })
-        .then((response) => {
-            console.log(response.data)
-        })
-    // Correto
+        // Correto
     
 
 
 
+
+
+        const maiorPrefixo = array => {
+            let maiorPrefixo = ""
+            for (let i = 0; i < array.length; i++) {
+        
+                // Roda um elemento na frente do primeiro for 
+                for (let j = i + 1; j < array.length; j++) {
+        
+                    // Encontrar o prefixo comum entre este par de strings
+                    let prefixoAtual = ""
+                    const palavra = array[i];
+                    const proxPalavra = array[j];
+        
+                    // Compara caracteres em ambas as strings
+                    for (let k = 0; palavra[k] === proxPalavra[k] && k < palavra.length && k < proxPalavra.length; k++) {
+                        prefixoAtual += palavra[k];
+                    }
+                    // Atualizar o maior prefixo se este for maior
+                    if (prefixoAtual.length > maiorPrefixo.length) {
+                        maiorPrefixo = prefixoAtual;
+                    }
+                }
+            }
+            return maiorPrefixo;
+        }
+        const resultadoMaiorPrefixo = maiorPrefixo(response.data['maior-prefixo-comum'].entrada.strings)
+        axios({
+            method: "post",
+            url: "https://servidor-exercicios-js-eficaz.vercel.app/exercicio/maior-prefixo-comum",
+            data: {"resposta": resultadoMaiorPrefixo},
+            headers: {"Content-Type": "application/json", "Accept": "application/json", "Authorization": `Bearer ${token}`}
+        })
+        .then((response) => {
+            console.log(response.data)
+        })
+        // Correto
 
 
     }, (error) => {
