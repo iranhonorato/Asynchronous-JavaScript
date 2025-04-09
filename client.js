@@ -336,10 +336,39 @@ axios({
             data: {"resposta": resultadoMaiorPrefixo},
             headers: {"Content-Type": "application/json", "Accept": "application/json", "Authorization": `Bearer ${token}`}
         })
+        // Correto
+
+
+
+
+
+
+
+
+
+ 
+        const second = array => {
+            // Ordenando o array original 
+            array.sort((a, b) => a - b)
+        
+            const segundoMenor = array[1]
+            const segundoMaior = array[array.length - 2]
+        
+            return segundoMenor + segundoMaior
+        }
+        const resultadoSecond = second(response.data['soma-segundo-maior-e-menor-numeros'].entrada.numeros)
+        axios({
+            method: "post",
+            url: "https://servidor-exercicios-js-eficaz.vercel.app/exercicio/soma-segundo-maior-e-menor-numeros",
+            data: {"resposta": resultadoSecond},
+            headers: {"Content-Type": "application/json", "Accept": "application/json", "Authorization": `Bearer ${token}`}
+        })
         .then((response) => {
             console.log(response.data)
         })
-        // Correto
+
+
+
 
 
     }, (error) => {
