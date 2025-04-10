@@ -487,8 +487,43 @@ axios({
     
 
 
+        const pegaUrl = async (url) => {
+            try {
+                const response = await axios({
+                    method: "get",
+                    url: `${url}`,
+                    headers: {"Content-Type": "application/json", "Accept": "application/json", "Authorization": `Bearer ${token}`}
+                  })
+                return response.data
+            } catch (error) {
+                console.log(error)
+                return NaN
+        }}
 
+        const somaComRequisicoes = async array => {
+            const result = []
+            for (const url of array) {
+                const num = await pegaUrl(url);
+                result.push(typeof num === "number" ? num : NaN);
+                }
+            const soma = result.reduce((acumulador,valorAtual) => acumulador + valorAtual, 0)
+            return soma
+        }
 
+        async function resposta() {
+            const respostaSomaComRequisicoes = await somaComRequisicoes(response.data['soma-com-requisicoes'].entrada.endpoints)
+            axios({
+                method: "post",
+                url: "https://servidor-exercicios-js-eficaz.vercel.app/exercicio/soma-com-requisicoes",
+                data: {"resposta": respostaSomaComRequisicoes},
+                headers: {"Content-Type": "application/json", "Accept": "application/json", "Authorization": `Bearer ${token}`}
+            })
+            .then((response) => {
+                console.log(response.data)
+            })
+        }
+        resposta()
+        
 
 
 
