@@ -368,6 +368,16 @@ axios({
 
         
 
+
+
+
+
+
+
+
+
+
+
         const palindromo = array => {
             const newArray = []
         
@@ -391,9 +401,60 @@ axios({
             data: {"resposta": resultadoPalindromo},
             headers: {"Content-Type": "application/json", "Accept": "application/json", "Authorization": `Bearer ${token}`}
         })
+        // Correto 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        const converte = valor => {
+            if (typeof Number(valor) === typeof 1) {
+                return Number(valor)
+            }
+            return NaN
+        }
+        
+        
+        function somaString(array) {
+            const newArray = array.map(converte)
+            const soma = newArray.reduce((acumulador, iterador) => {
+                return acumulador + iterador
+            }, 0)
+            return soma
+        }
+
+        const resultadoSomaString = somaString(response.data['soma-de-strings-de-ints'].entrada.strings)
+        axios({
+            method: "post",
+            url: "https://servidor-exercicios-js-eficaz.vercel.app/exercicio/soma-de-strings-de-ints",
+            data: {"resposta": resultadoSomaString},
+            headers: {"Content-Type": "application/json", "Accept": "application/json", "Authorization": `Bearer ${token}`}
+        })
         .then((response) => {
             console.log(response.data)
         })
+
+
+
+
+
 
 
 
