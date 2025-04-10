@@ -31,7 +31,9 @@ axios({
 
         // Soma valores
         const soma = (a,b) => {
-            return a + b 
+            if (typeof a === typeof 1 && typeof b === typeof 1) {
+                return a + b
+            }
         }
         const resultadoSoma = soma(response.data.soma.entrada.a, response.data.soma.entrada.b)
         axios({
@@ -40,7 +42,9 @@ axios({
             data: {"resposta": resultadoSoma},
             headers: {"Content-Type": "application/json", "Accept": "application/json", "Authorization": `Bearer ${token}`}
           })
-        // Correto 
+        .then((response) => {
+            console.log(response.data)
+        }) 
 
 
 
@@ -65,7 +69,9 @@ axios({
             data: {"resposta": resultadoTamanhoString},
             headers: {"Content-Type": "application/json", "Accept": "application/json", "Authorization": `Bearer ${token}`}
           })
-        // Correto
+        .then((response) => {
+            console.log(response.data)
+        })
 
 
 
@@ -89,7 +95,9 @@ axios({
             data: {"resposta": resultadoNameUser},
             headers: {"Content-Type": "application/json", "Accept": "application/json", "Authorization": `Bearer ${token}`}
           })
-        // Correto 
+        .then((response) => {
+            console.log(response.data)
+        }) 
 
 
 
@@ -101,16 +109,20 @@ axios({
 
         // Jaca wars 
         const jacaWars = (vel, ang) => {
-            const space = (vel)*Math.sin(ang*Math.PI/90)/9.8
-            const delta = 0.00000001
-            if (space === 100) {
-                return 0
-            } else if (space < 100) {
-                return -1
+            const g = 9.8;
+            const rad = (2 * ang * Math.PI) / 180; 
+            const distancia = (vel ** 2) * Math.sin(rad) / g;
+        
+            const delta = 0.0000001;
+        
+            if (Math.abs(distancia - 100) < delta) {
+                return 0; 
+            } else if (distancia < 100) {
+                return -1; 
             } else {
-                return 1
+                return 1; 
             }
-        }
+        };
         const resultadoJacaWars = jacaWars(response.data['jaca-wars'].entrada.v, response.data['jaca-wars'].entrada.theta)
         axios({
             method: "post",
@@ -118,7 +130,9 @@ axios({
             data: {"resposta": resultadoJacaWars},
             headers: {"Content-Type": "application/json", "Accept": "application/json", "Authorization": `Bearer ${token}`}
           })
-        // Correto 
+        .then((response) => {
+            console.log(response.data)
+        }) 
 
 
 
@@ -135,13 +149,10 @@ axios({
 
         // Ano bissexto 
         const bissexto = ano => {
-            const anoString = String(ano)
-            if (anoString.slice(-2) === "00") {
-                return ano % 400 === 0 ? true : false
-            } else { 
-                return ano % 4 === 0 ? true : false 
+            if (ano > 0) {
+                return (ano % 4 === 0 && ano % 100 !== 0) || (ano % 400 === 0);
             }
-        }
+        };
         const resultadoBissexto = bissexto(response.data['ano-bissexto'].entrada.ano)
         axios({
             method: "post",
@@ -149,7 +160,9 @@ axios({
             data: {"resposta": resultadoBissexto},
             headers: {"Content-Type": "application/json", "Accept": "application/json", "Authorization": `Bearer ${token}`}
           })
-        // Correto 
+        .then((response) => {
+            console.log(response.data)
+        }) 
         
 
 
@@ -173,7 +186,9 @@ axios({
             data: {"resposta": resultadoVolumePizza},
             headers: {"Content-Type": "application/json", "Accept": "application/json", "Authorization": `Bearer ${token}`}
           })
-        // Correto 
+        .then((response) => {
+            console.log(response.data)
+        }) 
         
 
 
@@ -197,7 +212,9 @@ axios({
             data: {"resposta": resultadoMru},
             headers: {"Content-Type": "application/json", "Accept": "application/json", "Authorization": `Bearer ${token}`}
           })
-        // Correto 
+        .then((response) => {
+            console.log(response.data)
+        }) 
 
         
 
@@ -227,7 +244,9 @@ axios({
             data: {"resposta": resutladoInverteString},
             headers: {"Content-Type": "application/json", "Accept": "application/json", "Authorization": `Bearer ${token}`}
           })
-        // Correto 
+        .then((response) => {
+            console.log(response.data)
+        }) 
 
 
 
@@ -254,7 +273,9 @@ axios({
             data: {"resposta": resultadoSomaValores},
             headers: {"Content-Type": "application/json", "Accept": "application/json", "Authorization": `Bearer ${token}`}
           })
-        // Correto 
+        .then((response) => {
+            console.log(response.data)
+        }) 
         
         
 
@@ -298,7 +319,9 @@ axios({
             data: {"resposta": resultadoPrimo},
             headers: {"Content-Type": "application/json", "Accept": "application/json", "Authorization": `Bearer ${token}`}
           })
-        // Correto
+        .then((response) => {
+            console.log(response.data)
+        })
     
 
 
@@ -336,7 +359,9 @@ axios({
             data: {"resposta": resultadoMaiorPrefixo},
             headers: {"Content-Type": "application/json", "Accept": "application/json", "Authorization": `Bearer ${token}`}
         })
-        // Correto
+        .then((response) => {
+            console.log(response.data)
+        })
 
 
 
@@ -363,7 +388,9 @@ axios({
             data: {"resposta": resultadoSecond},
             headers: {"Content-Type": "application/json", "Accept": "application/json", "Authorization": `Bearer ${token}`}
         })
-        // Correto 
+        .then((response) => {
+            console.log(response.data)
+        })
 
 
         
@@ -401,7 +428,9 @@ axios({
             data: {"resposta": resultadoPalindromo},
             headers: {"Content-Type": "application/json", "Accept": "application/json", "Authorization": `Bearer ${token}`}
         })
-        // Correto 
+        .then((response) => {
+            console.log(response.data)
+        })
 
 
 
@@ -451,6 +480,11 @@ axios({
             console.log(response.data)
         })
 
+
+
+
+
+    
 
 
 
