@@ -363,10 +363,37 @@ axios({
             data: {"resposta": resultadoSecond},
             headers: {"Content-Type": "application/json", "Accept": "application/json", "Authorization": `Bearer ${token}`}
         })
+        // Correto 
+
+
+        
+
+        const palindromo = array => {
+            const newArray = []
+        
+            // Organizando 
+            for (const elem of array) {
+                newArray.push(elem.toLowerCase().split("").reverse().join(""))
+            }
+        
+            const arrayPalindromo = []
+            for (const elem of array) {
+                if (newArray.includes(elem)) {
+                    arrayPalindromo.push(elem)
+                }
+            }
+            return arrayPalindromo.length
+        }
+        const resultadoPalindromo = palindromo(response.data['conta-palindromos'].entrada.palavras)
+        axios({
+            method: "post",
+            url: "https://servidor-exercicios-js-eficaz.vercel.app/exercicio/conta-palindromos",
+            data: {"resposta": resultadoPalindromo},
+            headers: {"Content-Type": "application/json", "Accept": "application/json", "Authorization": `Bearer ${token}`}
+        })
         .then((response) => {
             console.log(response.data)
         })
-
 
 
 
