@@ -151,7 +151,7 @@ axios({
         const bissexto = ano => {
             if (ano > 0) {
                 return (ano % 4 === 0 && ano % 100 !== 0) || (ano % 400 === 0);
-            }
+            }   
         };
         const resultadoBissexto = bissexto(response.data['ano-bissexto'].entrada.ano)
         axios({
