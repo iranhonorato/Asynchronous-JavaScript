@@ -3,8 +3,8 @@
     "titulo": "Soma valores",
     "descricao": "Qual é o resultado de a + b?",
     "entrada": {
-      "a": 8835,
-      "b": 8103
+      "a": 204,
+      "b": 4729
     },
     "pontuacao": 0.5
   },
@@ -12,7 +12,7 @@
     "titulo": "Tamanho da string",
     "descricao": "Qual é o tamanho (quantidade de caracteres) desta string?",
     "entrada": {
-      "string": "mmgnohsoltietmevolvjtedfjjexrqfgwlwiv"
+      "string": "oxckowbcvbomtwnuisscducvbdoibtongt"
     },
     "pontuacao": 0.5
   },
@@ -20,7 +20,7 @@
     "titulo": "Nome do usuário",
     "descricao": "Qual é o nome do usuário deste e-mail? Exemplo: o nome do usuário do e-mail fulano123@email.com.br é fulano123",
     "entrada": {
-      "email": "wqifihs@ftyh.com.tb"
+      "email": "ufckbbbb@gtd.com.gp"
     },
     "pontuacao": 0.5
   },
@@ -28,8 +28,8 @@
     "titulo": "Jaca Wars!",
     "descricao": "Jaca Wars! Você mora no sítio, e está em guerra com seu vizinho. Você dispõe de uma catapulta de lançamento de jacas e o seu alvo é a catapulta do vizinho, que está à 100 metros da sua. Para a velocidade v e o ângulo theta, em graus, de lançamento da jaca, devolva -1 se a jaca não chegou no alvo, 1 se passou do alvo e 0 se atingiu o alvo. Uma jaca quando cai se espalha por um raio de 2 metros. Considere que a jaca acerta o alvo se cai à uma distância do alvo menor que o seu raio de espalhamento. A fórmula da distância alcançada por um projétil (na ausência de efeitos de arrasto da atmosfera) é: v^2 sen(2 theta) / g, onde g vale 9,8 m/s^2.",
     "entrada": {
-      "v": 39,
-      "theta": 30
+      "v": 34,
+      "theta": 36
     },
     "pontuacao": 0.5
   },
@@ -37,7 +37,7 @@
     "titulo": "Ano bissexto",
     "descricao": "Esse ano é bissexto (devolva true ou false)?",
     "entrada": {
-      "ano": 10
+      "ano": 2000
     },
     "pontuacao": 0.5
   },
@@ -45,7 +45,7 @@
     "titulo": "Volume da PIZZA!",
     "descricao": "Faça uma função que calcule o volume de uma pizza de raio z e altura a. Assuma que a pizza é um cilindro. Envie o resultado arredondado com Math.round().",
     "entrada": {
-      "z": 8,
+      "z": 5,
       "a": 3
     },
     "pontuacao": 0.5
@@ -54,9 +54,9 @@
     "titulo": "Movimento retilíneo uniforme",
     "descricao": "Qual é a posição de um objeto em movimento retilíneo uniforme no instante t, com posição inicial s0 e velocidade v?",
     "entrada": {
-      "s0": 215,
-      "v": 1885,
-      "t": 140
+      "s0": 336,
+      "v": 1989,
+      "t": 451
     },
     "pontuacao": 0.5
   },
@@ -64,7 +64,7 @@
     "titulo": "Inverta a string",
     "descricao": "Como fica essa string de trás para a frente?",
     "entrada": {
-      "string": "bemyvikcaqbtcyphsnb"
+      "string": "muyyvnihmxu"
     },
     "pontuacao": 0.5
   },
@@ -73,13 +73,13 @@
     "descricao": "Qual é o valor da soma de todos os valores armazenados neste objeto?",
     "entrada": {
       "objeto": {
-        "djd": 541,
-        "mftkkpwwo": 572,
-        "wmcnv": 579,
-        "qrhcwpda": 866,
-        "sxdlptej": 247,
-        "gxmaukt": 281,
-        "grsrat": 808
+        "ebwwegsr": 234,
+        "eikvdsfuk": 798,
+        "wotcn": 709,
+        "fhhtno": 993,
+        "pcrbgmewu": 841,
+        "gxxbuyc": 734,
+        "xckp": 244
       }
     },
     "pontuacao": 0.5
@@ -88,7 +88,7 @@
     "titulo": "Encontra o n-ésimo número primo",
     "descricao": "Qual é o n-ésimo número primo? Se n = 1, a resposta é 2, se n = 5, a resposta é 11.",
     "entrada": {
-      "n": 294
+      "n": 583
     },
     "pontuacao": 0.5
   },
@@ -97,24 +97,24 @@
     "descricao": "Qual é o maior prefixo (qualquer conjunto de caracteres que começa no começo da string) que ocorre em pelo menos duas strings do array de entrada? Exemplo, para a entrada ['casa', 'casamento', 'casamos', 'banana'] a resposta esperada é 'casam'. Para a entrada ['abacaxi', 'banana'], a resposta esperada é '' (string vazia).",
     "entrada": {
       "strings": [
-        "rxkeqtkwjcsoejxkjr",
-        "rxkeqtkwltqbcopuoxd",
-        "lvhoksdlpwxrjrhsovw",
-        "lvhoksdgsslgncdjeja",
-        "inkfwifyfqqcbpgeqpr",
-        "inkfwimk",
-        "uobdvqhcww",
-        "uobdvdaivajjx",
-        "bkyjpawhqjsygj",
-        "bkyjgraqducnxj",
-        "ydjlptnixbb",
-        "ydjhbinyhlbyral",
-        "njalqidkdhjk",
-        "njynoyelkgbqcfhtvtp",
-        "aofrqnicybtekqfgj",
-        "aoksbnxyhe",
-        "ynobwdivlyuvksoya",
-        "ynpcknbdmswdxg"
+        "jycxifih",
+        "jycxifet",
+        "oqvqxjx",
+        "oqvqxximnfteuw",
+        "wovwpgkd",
+        "wovwmqtbnwjdaqgvkgd",
+        "tebdwcigbtmarj",
+        "tebefmhnmuji",
+        "dgtqvibmkggv",
+        "dgaccsdwdr",
+        "bturcbnpeucrnthu",
+        "btarcmpwkackgjjpx",
+        "sgycjvcmig",
+        "sgeqgkddijowdnae",
+        "ttjefbrrmc",
+        "tttextqotwx",
+        "ynonsqwbejkxxigenx",
+        "yndqijocdem"
       ]
     },
     "pontuacao": 0.5
@@ -124,38 +124,56 @@
     "descricao": "Qual é a soma do segundo maior número do array com o segundo menor?",
     "entrada": {
       "numeros": [
-        88191,
-        -21407,
-        78000,
-        -64333,
-        -82773,
-        -68556,
-        23983,
-        -62744,
-        -76250,
-        -23423,
-        -71526,
-        3960,
-        54163,
-        2288,
-        -8250,
-        -43616,
-        72289,
-        -63618,
-        -11196,
-        -52256,
-        71389,
-        -45848,
-        54085,
-        12193,
-        55137,
-        -33401,
-        10408,
-        21599,
-        55997,
-        53844,
-        90363,
-        -4817
+        90061,
+        42705,
+        55389,
+        27221,
+        -84645,
+        -73585,
+        8311,
+        57460,
+        -20261,
+        59961,
+        -15596,
+        -8122,
+        3858,
+        -89958,
+        43770,
+        43240,
+        63016,
+        -99590,
+        -16468,
+        -94800,
+        46844,
+        36747,
+        35126,
+        84150,
+        -82738,
+        96376,
+        16538,
+        -30550,
+        -46739,
+        -34766,
+        -17675,
+        -59342,
+        -96576,
+        99870,
+        -35285,
+        -56474,
+        -28036,
+        -72610,
+        -85895,
+        26494,
+        -57628,
+        -92322,
+        36856,
+        -44559,
+        63208,
+        -44451,
+        71295,
+        10904,
+        31089,
+        93678
       ]
     },
     "pontuacao": 0.5
@@ -165,47 +183,36 @@
     "descricao": "Quantos palíndromos existem neste array?",
     "entrada": {
       "palavras": [
-        "dcvuvcd",
-        "vvv",
-        "ssuouss",
-        "ybqby",
-        "gtehendj",
-        "kulwpxfcg",
-        "wlmfxenhc",
-        "ibjwdl",
-        "hechqorij",
-        "qnvwvnq",
-        "uknku",
-        "ysdgq",
-        "qoq",
-        "ifllkb",
-        "scoicixp",
-        "mklxpfiay",
-        "aka",
-        "met",
-        "xaj",
-        "voihxbu",
-        "yyrgtss",
-        "hoh",
-        "ckgdqdhi",
-        "tvqnqvt",
-        "hqhhhqh",
-        "clrmr",
-        "fbbcyephh",
-        "ljcjl",
-        "enw",
-        "xoxox",
-        "wew",
-        "mckjhjkcm",
-        "qdvwo",
-        "eoe",
-        "mpjn",
-        "xmx",
-        "xbxbx",
-        "enseoesne",
-        "ldl",
-        "ggg",
-        "dsd"
+        "xbxxbx",
+        "snrkkrns",
+        "rpmxik",
+        "kmunw",
+        "dvehr",
+        "cjhddhjc",
+        "bccb",
+        "nqdacrt",
+        "tsroyyorst",
+        "nxxooxxn",
+        "dkooggookd",
+        "borynurox",
+        "kwwk",
+        "vhayyahv",
+        "yhpxydnnm",
+        "hbco",
+        "akcsscka",
+        "kacnncak",
+        "kyyk",
+        "tkkt",
+        "owufhi",
+        "jssurn",
+        "ccjxxjcc",
+        "wtappatw",
+        "gjci",
+        "leel",
+        "qjqqjq",
+        "mlgglm",
+        "ajssja",
+        "sivvis"
       ]
     },
     "pontuacao": 0.5
@@ -215,43 +222,45 @@
     "descricao": "Calcule a soma dos valores inteiros representados por strings usando os métodos map e reduce.",
     "entrada": {
       "strings": [
-        "-95498",
-        "49820",
-        "70861",
-        "99394",
-        "-33948",
-        "-72288",
-        "-88412",
-        "22124",
-        "-16049",
-        "-38002",
-        "-89651",
-        "87031",
-        "-54724",
-        "-93610",
-        "-97951",
-        "-57925",
-        "74546",
-        "15574",
-        "-87666",
-        "81863",
-        "-3687",
-        "-34315",
-        "17063",
-        "90590",
-        "-16763",
-        "-43489",
-        "13643",
-        "-17915",
-        "43820",
-        "75020",
-        "3117",
-        "-64504",
-        "-59274",
-        "10845",
-        "-55249",
-        "93760",
-        "-90624"
+        "59885",
+        "97424",
+        "41762",
+        "59287",
+        "20385",
+        "-89530",
+        "-90939",
+        "19383",
+        "-14799",
+        "-20572",
+        "-97523",
+        "-48780",
+        "-3354",
+        "-75576",
+        "-14765",
+        "90310",
+        "30124",
+        "24032",
+        "50498",
+        "87169",
+        "93545",
+        "50494",
+        "29140",
+        "-47933",
+        "-41779",
+        "-28243",
+        "62784",
+        "-39629",
+        "44238",
+        "73976",
+        "-92606",
+        "-50123",
+        "17395",
+        "-6050",
+        "-97683",
+        "44789",
+        "-44442",
+        "57606",
+        "55437"
       ]
     },
     "pontuacao": 0.5
@@ -261,13 +270,15 @@
     "descricao": "Calcule a soma dos valores contidos nos endpoints (cada endpoint devolve um número).",
     "entrada": {
       "endpoints": [
-        "http://servidor-exercicios-js-eficaz.vercel.app/exercicio/soma-com-requisicoes/qlcej",
-        "http://servidor-exercicios-js-eficaz.vercel.app/exercicio/soma-com-requisicoes/bhnwn",
-        "http://servidor-exercicios-js-eficaz.vercel.app/exercicio/soma-com-requisicoes/euvxx",
-        "http://servidor-exercicios-js-eficaz.vercel.app/exercicio/soma-com-requisicoes/xtdwo",
-        "http://servidor-exercicios-js-eficaz.vercel.app/exercicio/soma-com-requisicoes/dxyhe",
-        "http://servidor-exercicios-js-eficaz.vercel.app/exercicio/soma-com-requisicoes/pdnoj",
-        "http://servidor-exercicios-js-eficaz.vercel.app/exercicio/soma-com-requisicoes/jlnam"
+        "http://servidor-exercicios-js-eficaz.vercel.app/exercicio/soma-com-requisicoes/lvlqu",
+        "http://servidor-exercicios-js-eficaz.vercel.app/exercicio/soma-com-requisicoes/cewmt",
+        "http://servidor-exercicios-js-eficaz.vercel.app/exercicio/soma-com-requisicoes/ikstn",
+        "http://servidor-exercicios-js-eficaz.vercel.app/exercicio/soma-com-requisicoes/dhnrj",
+        "http://servidor-exercicios-js-eficaz.vercel.app/exercicio/soma-com-requisicoes/shwbt",
+        "http://servidor-exercicios-js-eficaz.vercel.app/exercicio/soma-com-requisicoes/hfosh",
+        "http://servidor-exercicios-js-eficaz.vercel.app/exercicio/soma-com-requisicoes/rfvuy",
+        "http://servidor-exercicios-js-eficaz.vercel.app/exercicio/soma-com-requisicoes/lwucp",
+        "http://servidor-exercicios-js-eficaz.vercel.app/exercicio/soma-com-requisicoes/ijyjg"
       ]
     },
     "pontuacao": 1
@@ -276,7 +287,7 @@
     "titulo": "Caça ao tesouro",
     "descricao": "Siga as URLs até encontrar o tesouro (um número).",
     "entrada": {
-      "inicio": "http://servidor-exercicios-js-eficaz.vercel.app/exercicio/caca-ao-tesouro/edsuy"
+      "inicio": "http://servidor-exercicios-js-eficaz.vercel.app/exercicio/caca-ao-tesouro/pltdi"
     },
     "pontuacao": 1
   }

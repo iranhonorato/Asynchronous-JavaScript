@@ -234,7 +234,7 @@ function somaString(array) {
 
 
 // 15º exercício: soma-com-requisicoes
-const pegaUrl = async (url, token) => {
+const pegaUrlSomaRequisicoes = async (url, token) => {
     try {
         const response = await axios({
             method: "get",
@@ -250,7 +250,7 @@ const pegaUrl = async (url, token) => {
 const somaComRequisicoes = async array => {
     const result = []
     for (const url of array) {
-        const num = await pegaUrl(url, token)
+        const num = await pegaUrlSomaRequisicoes(url, token)
         if (typeof num === "number") {
             result.push(num)
         } else {
@@ -262,13 +262,28 @@ const somaComRequisicoes = async array => {
 
 
 // 16º exercício: caca-ao-tesouro
-//
-//
-//
-//      código aqui
-//
-//
-//
+const pegaUrlCacaTesouro = async (url, token) => {
+    try {
+        const response = await axios({
+            method: "get",
+            url: `${url}`,
+            headers: {"Content-Type": "application/json", "Accept": "application/json", "Authorization": `Bearer ${token}`}
+          })
+        return response.data
+    } catch (error) {
+        console.log(error)
+        return NaN
+}}
+const cacaTesouro = async url =>{
+    let result = await pegaUrlCacaTesouro(url, token)
+    do {
+        result = await pegaUrlCacaTesouro(result, token)
+    } while (typeof result === "string")
+    return result 
+}
+
+
+
 
 
 
@@ -541,6 +556,25 @@ async function enviaResposta15(exercises, token){    // Enviando 15º exercício
 
 
 
+
+async function enviaResposta16(exercises, token){    // Enviando 15º exercício
+    const url = exercises.data['caca-ao-tesouro'].entrada.inicio
+    const resultadocacaTesouro = await cacaTesouro(url)
+    try {
+        const response = await axios.post(
+            "https://servidor-exercicios-js-eficaz.vercel.app/exercicio/caca-ao-tesouro",
+            {"resposta": resultadocacaTesouro}, 
+            {headers: {"Content-Type": "application/json", "Accept": "application/json", "Authorization": `Bearer ${token}`}}
+        ) 
+        console.log("caca-ao-tesouro: ", response.data.sucesso)
+    } catch (error) {
+        console.log("soma-com-requisicoes: ", error)
+    }
+}
+
+
+
+
 async function main() {
     // Envia as respostas 
     await enviaResposta1(exercises, token)
@@ -558,6 +592,7 @@ async function main() {
     await enviaResposta13(exercises, token)
     await enviaResposta14(exercises, token)
     await enviaResposta15(exercises, token)
+    await enviaResposta16(exercises, token)
 }
 
 
